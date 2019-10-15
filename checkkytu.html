@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>kiem tra ky tu dau</title>
+</head>
+<body>
+<div>
+    <h1>kiem tra ky tu dau</h1>
+   nhap chuoi: <input  type="text" id="inp" />
+    <button type="button" onclick="getData()">submit</button>
+</div>
+<script>
+    function getData() {
+        var string = document.getElementById('inp').value;
+        let result = isFirstLetterUpperCase(string);
+    }
+    function isFirstLetterUpperCase(str){
+        let regexp = /^[A-Z]/;
+        if (regexp.test(str)) {
+            alert("chuoi co ky tu viet hoa o dau!");
+        } else {
+            alert("chuoi khong co ky tu viet hoa o dau!");
+        }
+    }
+</script>
+</body>
+</html>
